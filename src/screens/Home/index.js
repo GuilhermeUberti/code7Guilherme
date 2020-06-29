@@ -1,11 +1,20 @@
 import React from 'react';
-import { SafeAreaView, Text, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
-const Page = () => {
+import { MenuArea, MenuImage } from './styled';
+
+const Page = (props) => {
+
+    handleMenu = () => {
+        props.navigation.openDrawer();
+    }
+
     return (
         <SafeAreaView>
-            <StatusBar barStyle="#dark-content" backgroundColor="#000"/>
-            <Text>Teste</Text>
+            <StatusBar barStyle="#dark-content" backgroundColor="#000" />
+            <MenuArea underlayColor="transparent" onPress={handleMenu}>
+                <MenuImage source={require('../../assets/menu.png')} />
+            </MenuArea>
         </SafeAreaView>
     );
 }

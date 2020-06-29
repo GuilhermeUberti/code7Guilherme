@@ -36,7 +36,8 @@ const Page = (props) => {
                 alert(res.error)
             } else {
                 //1. Guardar o token no Reducer
-                props.setToken(res.token)
+                props.setToken(res.token);
+                props.setName(res.name);
                 props.navigation.dispatch(StackActions.reset({
                     index: 0,
                     actions: [
@@ -57,7 +58,8 @@ const Page = (props) => {
                 alert(res.error)
             } else {
                 //1. Guardar o token no Reducer
-                props.setToken(res.token)
+                props.setToken(res.token);
+                props.setName(res.name);
                 props.navigation.dispatch(StackActions.reset({
                     index: 0,
                     actions: [
@@ -124,7 +126,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setToken: (token) => dispatch({ type: 'SET_TOKEN', payload: { token } })
+        setToken: (token) => dispatch({ type: 'SET_TOKEN', payload: { token } }),
+        setName: (name) => dispatch({ type: 'SET_NAME', payload: { name } })
     };
 }
 

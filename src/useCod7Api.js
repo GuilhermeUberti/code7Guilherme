@@ -5,7 +5,8 @@ export default () => ({
             setTimeout(() => {
                 let json = {
                     error: '',
-                    token: '123'
+                    token: '123',
+                    name: 'Guilherme'
                 };
 
                 resolve(json)
@@ -24,6 +25,7 @@ export default () => ({
                     json.error = 'E-mail já existente no banco!';
                 } else {
                     json.token = '123';
+                    json.name = 'Guilherme';
                 }
                 resolve(json)
             }, 1000);
