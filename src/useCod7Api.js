@@ -6,7 +6,7 @@ export default () => ({
                 let json = {
                     error: '',
                     token: '123',
-                    name: 'Guilherme'
+                    name: ''
                 };
 
                 resolve(json)
@@ -25,7 +25,7 @@ export default () => ({
                     json.error = 'E-mail já existente no banco!';
                 } else {
                     json.token = '123';
-                    json.name = 'Guilherme';
+                    json.name = '';
                 }
                 resolve(json)
             }, 1000);

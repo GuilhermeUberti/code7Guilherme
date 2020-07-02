@@ -16,6 +16,7 @@ const Page = (props) => {
                 <MenuImage source={require('../../assets/menu.png')} />
             </MenuArea>
         </SafeAreaView>
+
     );
 }
 
